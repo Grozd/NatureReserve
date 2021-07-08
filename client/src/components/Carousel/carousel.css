@@ -1,0 +1,57 @@
+.listJSX{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.blokLi{
+    visibility: hidden;
+    min-width: inherit;
+    width: 1350px;
+    flex: 1 1 auto;
+    list-style-type: none;
+}
+.blokLi_Ul{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+.nav_item{
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    height: 270px;
+    width: 300px;
+    /* flex: 1 1 calc(250px); */
+    margin: 10px 15px;
+    background-size: 130% 100%;
+    background-repeat: no-repeat;
+    font-size: 30%;
+    filter: grayscale(70%);
+    transition: all 0.5s ease 0s;
+}
+.nav_item:hover{
+    filter: grayscale(0%);
+}
+.fon_text_li{
+    background-color: rgba(37, 20, 20, 0.514);
+    text-align: center;
+    font-family: 'Mastodon';
+    color: rgba(69, 177, 180, 0.863);
+    text-shadow: 1px 2px rgb(15, 44, 77);
+    letter-spacing: 1px;
+}
+.active{
+    visibility: visible;
+}
+.arrow_nav{
+    width: 65px;
+    transition: all 0.5s ease 0s;
+}
+.arrow_nav:hover{
+    background-color: aquamarine;
+}

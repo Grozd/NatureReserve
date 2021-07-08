@@ -1,0 +1,32 @@
+/* Styles Pages */
+.home{
+    width: 100%;
+    height: 100%;
+    transition: all 1.5s;
+}
+/* end Styles Pages */
+
+.breadcrumbs{
+    position: absolute;
+    left: 15%;
+    top: 50px;
+    width: 100%;
+    list-style: none;
+    color: aliceblue;
+}
+.storePath{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    background-color: rgba(61, 142, 153);
+    padding: 10px 0 7px 0;
+    border-radius: 5px;
+    margin-right: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+.par{
+    width: 100px;
+    height: 6px;
+    background-color: rgba(61, 142, 153);
+}

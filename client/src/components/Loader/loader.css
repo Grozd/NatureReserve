@@ -1,0 +1,11 @@
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    border: 6px solid;
+    border-radius: 50%;
+    border-color: brown transparent brown transparent;
+    margin: auto;
+}
