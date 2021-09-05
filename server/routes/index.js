@@ -1,8 +1,10 @@
 const router = require('express').Router()
-const authRouter = require('./authRouter')
+const authenRouter = require('./authenRouter')
 const animalsRouter = require('./animalsRouter')
+const authorizRouter = require('./authorizRouter')
 
+router.use('/authentication', authenRouter)
 router.use('/animals', animalsRouter)
-router.use('/auth', authRouter) //TODO: доделать маршрут и его обработчик
+router.use('/authorization', authorizRouter)
 
 module.exports = router

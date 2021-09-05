@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Context } from '../App';
 import {Page} from '../components'
 import {Loader} from '../components'
-import {HE} from '../error/handleErrors'
+import {HandlerErrors} from '../error/handleErrors'
 
 const Animals = () => {
     console.log('Animals');
@@ -35,7 +35,7 @@ const Animals = () => {
 
             if(err instanceof Error) setData({
               ...data,
-              error: HE.catchError(err, 'приносим извенения, но содержимое, пока, не доступно'),
+              error: HandlerErrors.catchError(err, 'приносим извенения, но содержимое, пока, не доступно'),
               loading: false
             })
           } finally {}

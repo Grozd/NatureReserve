@@ -1,20 +1,22 @@
-import React, { useEffect} from 'react'
-import objStore from '../../store/local'
+import React from 'react'
+import ServiceBreadcrumbs from '../../ServiceBreadcrumbs'
 import {Link} from 'react-router-dom'
+import './breadcrumbs.css'
 
 const Breadcrumbs = () => {
 
-    let local = document.location.pathname
-    objStore.check(local)
+    // запись в массив. порядок посещений страниц
+    let pathname = document.location.pathname
+    ServiceBreadcrumbs.check(pathname)
 
-    if(local === '/home') return null
+    if(pathname === '/home') return null
 
     function renderLi() {
         let arr = []
-        objStore.state.urlPathname.forEach((v,i)=>{
+        ServiceBreadcrumbs.state.urlPathname.forEach((v,i)=>{
             let elemLi =
-            (<li key={i} className='storePath'>
-                <Link to={v} onClick={objStore.removeItem.bind(objStore, v)}>{v.replace(/\//, '')}</Link>
+            (<li key={i} className='breadcrumbs_item'>
+                <Link to={v} onClick={ServiceBreadcrumbs.removeItem.bind(ServiceBreadcrumbs, v)}>{v.replace(/\//, '')}</Link>
             </li>)
 
             arr.push(elemLi)

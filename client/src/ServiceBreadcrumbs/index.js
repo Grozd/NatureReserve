@@ -1,13 +1,15 @@
+// событие перехода в браузере по стрелкам
 function addListener() {
     window.addEventListener('popstate', module.exports.handlHistoryMove.bind(module.exports), true)
 }
 
-class Store {
+// перенести в redux
+// хранит и обслуживает Breadcrumbs
+class ServiceBreadcrumbs {
     constructor() {
       this.state = {
           urlPathname: ['/home']
       }
-      this.logErrors = {}
     }
 
     addItem(pathname) {
@@ -25,11 +27,12 @@ class Store {
         this.addItem(pathname)
         return true
     }
+    // удаление из массива pathname - текущей страницы
     handlHistoryMove() {
         let path = document.location.pathname
         this.removeItem(path)
     }
 }
 
-module.exports = new Store()
+module.exports = new ServiceBreadcrumbs()
 addListener()

@@ -1,6 +1,6 @@
 import React from 'react'
 import {NotifyError} from '../components'
-import {FetchException} from '../error/exception'
+
 
 class Fuse extends React.Component{
     constructor(props) {
@@ -20,9 +20,7 @@ class Fuse extends React.Component{
     componentDidCatch(error, errorInfo) {
         //console.log('ошибка тут componentDidCatch', error);
         //logErrorTomyService(error, errorInfo)
-        if(error instanceof FetchException) {
-            console.log('ошибка тут componentDidCatch', error);
-        }
+
     }
 
     render() {
@@ -38,23 +36,19 @@ class Fuse extends React.Component{
 }
 
 class HandlerErrors extends Error {
-    constructor(props) {
-        super(props) 
+    constructor(err) {
+        super() 
         if(this.constructor.instance) return this.constructor.instance
-        this.state = { haseError : false }
         this.constructor.instance = this
+        this.err = err
     }
 
-    catchError(err, message) {
-        this.state = { 
-            hasError: true,
-            message: message,
-            primary: err
-        }
-        return this.state
+    static catchError(err, message) {
+
+        
+        return new HandlerErrors(err)
     }
 }
 
-const HE = new HandlerErrors()
 
-export {Fuse, HE}
+export {Fuse, HandlerErrors}

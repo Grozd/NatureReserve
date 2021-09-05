@@ -1,0 +1,16 @@
+.login_btn,.reg_btn{
+    width: 25%;
+    text-align: center;
+    color: rgb(158, 47, 47);
+    font-size: 150%;
+    font-family: 'RevillionHQ';
+    transition: all 0.5s;
+    border: 1px solid black;
+    margin: 20px 0 15px 0;
+}
+.login_btn:hover, .reg_btn:hover{
+    background: rgba(56, 197, 143, 0.582);
+    cursor: pointer;
+    color: rgb(224, 193, 52);
+    text-shadow: 0 0 10px black;
+}

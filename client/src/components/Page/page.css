@@ -2,31 +2,40 @@
 .home{
     width: 100%;
     height: 100%;
-    transition: all 1.5s;
+}
+.animals,.contacts,.login,.reg{
+    width: 80%;
+    height: 80%;
+    /* margin: 4% auto auto auto; */
+    background-color: rgba(255, 255, 255, 0.384);
+}
+.animals{
+    background-color: rgba(59, 78, 26, 0.795);
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+.animals_content{
+    display: flex;
+    height: 80%;
+}
+.animals_content_text{
+    width: 38%;
+    padding: 15px 15px 0 15px;
+    color: white;
+    clear: right;
+    text-indent: 20px;
+}
+.animals_content_reviewAnimal{
+    width: inherit;
+    width: 60%;
+}
+.contacts{
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: auto;
+    margin-top: 10%;
+}
+.reg {
+    width: 80%;
+    height: 80%;
 }
 /* end Styles Pages */
-
-.breadcrumbs{
-    position: absolute;
-    left: 15%;
-    top: 50px;
-    width: 100%;
-    list-style: none;
-    color: aliceblue;
-}
-.storePath{
-    display: inline-block;
-    position: relative;
-    width: 100px;
-    background-color: rgba(61, 142, 153);
-    padding: 10px 0 7px 0;
-    border-radius: 5px;
-    margin-right: 70px;
-    text-align: center;
-    cursor: pointer;
-}
-.par{
-    width: 100px;
-    height: 6px;
-    background-color: rgba(61, 142, 153);
-}

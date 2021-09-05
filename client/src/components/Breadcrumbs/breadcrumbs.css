@@ -1,0 +1,18 @@
+.breadcrumbs{
+    position: relative;
+    top: -50px;
+    width: 100%;
+    list-style: none;
+    color: aliceblue;
+}
+.breadcrumbs_item{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    background-color: rgba(61, 142, 153);
+    padding: 5px 0 5px 0;
+    border-radius: 5px;
+    margin-right: 70px;
+    text-align: center;
+    cursor: pointer;
+}

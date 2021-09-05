@@ -1,31 +1,32 @@
+const logger = require('../config/winston')
+
 class HttpError extends Error{
-    constructor(status, message, err) {
+    constructor(status = 500, err = null) {
         super()
         this.name = this.constructor.name
-        this.message = message
-        this.primary = err
+        this.message = err
         this.status = status
     }
 
     /**
      * 
-     * TODO: обрабатывать различие в типах ошибок. 
+     * TODO описать больше статусов ошибок и их логгирование
      * @param {*} status 
      * @param {*} message 
      * @param {*} err 
      */
 
-    static catchError(status, message, err) {
-        if(err instanceof ReferenceError) {
-            return new HttpError(status, message, err)
-        }
-        if(err instanceof TypeError) {
-            return new HttpError(status, message, err)
-        }
-        if(err instanceof RangeError) {
-            return new HttpError(status, message, err)
-        }
+    // status default 500
+    static serverError(err, message) {
         
+        logger.error('server error ', message)
+        return new HttpError(500, err)
+    }
+
+    static requestError(status, err) {
+
+        logger.warn(err.message)
+        return new HttpError(status, err)
     }
 }
     

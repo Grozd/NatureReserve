@@ -1,18 +1,24 @@
 
 import Page from './Page'
 import Header from './Header'
-import Nav from './Nav'
+import Authentication from './Authentication'
 import Button from './Button'
 import Breadcrumbs from './Breadcrumbs'
 import Loader from './Loader'
+import Carousel2 from './Carousel/Carousel2'
 import NotifyError from './NotifyError'
+import Input from './Input'
+import Form from './Form'
 
 export {
     Page,
     Header,
-    Nav,
+    Authentication,
     Button,
     Breadcrumbs,
     Loader,
-    NotifyError
+    NotifyError,
+    Carousel2,
+    Input,
+    Form
 }

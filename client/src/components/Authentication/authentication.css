@@ -1,0 +1,21 @@
+.authentication{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 15%;
+    height: 10%;
+    border: 1px solid rgb(168, 192, 190);
+    background-color: rgba(255, 254, 254, 0.26);
+    margin: 0 0 0 auto;
+}
+.authentication_link_signIn, .authentication_link_reg{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(162, 223, 102);
+}
+.toAccount{
+    width: inherit;
+    height: inherit;
+    background-color: blue;
+}

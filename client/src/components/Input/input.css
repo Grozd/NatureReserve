@@ -1,0 +1,22 @@
+.inputPass_wrap{
+    margin-top: 15px;
+}
+.inputEmail_wrap, .inputPass_wrap{
+    width: 100%;
+    height: 100%;
+}
+.inputEmail, .inputPass{
+    width: 80%;
+    height: 50%;
+    font-size: 120%;
+}
+.inputEmail_invalidMessage, .inputPass_invalidMessage{
+    margin-top: 10px;
+    color: rgb(158, 51, 51);
+    font-size: 130%;
+}
+.inputEmail_successMessage, .inputPass_successMessage{
+    margin-top: 10px;
+    color: rgb(28, 85, 133);
+    font-size: 130%;
+}
